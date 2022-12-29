@@ -22,6 +22,10 @@
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -70,7 +74,19 @@ button, input, textarea {
   cursor: pointer;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 42px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 39px;
+  }
+}
+
+@media (max-width: 580px) {
   .container {
     padding: 0 10px;
   }
