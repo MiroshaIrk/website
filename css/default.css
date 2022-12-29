@@ -45,8 +45,9 @@ h1, h2 {
 }
 
 .container {
-  max-width: 1290px;
+  max-width: 1374px;
   margin: 0 auto;
+  padding: 0 42px;
 }
 
 .hide {
@@ -67,4 +68,10 @@ ul {
 button, input, textarea {
   font: inherit;
   cursor: pointer;
+}
+
+@media (max-width: 570px) {
+  .container {
+    padding: 0 10px;
+  }
 }
