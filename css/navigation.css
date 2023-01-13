@@ -81,8 +81,6 @@
     color: var(--main-color);
     background-color: var(--trigger-color);
   }
-
-
 }
 
 @media (max-width: 760px) {

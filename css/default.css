@@ -35,7 +35,7 @@ body {
 }
 
 h1, h2 {
-  font-family: "Cormorant"serif;
+  font-family: "Cormorant", serif;
   font-weight: 700;
   font-size: 70px;
   line-height: 100%;

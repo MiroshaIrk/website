@@ -16,8 +16,6 @@
   line-height: 0;
 }
 
-.hero__img {}
-
 .hero__right {
   max-width: 630px;
   padding-top: 20px;
@@ -188,8 +186,6 @@
     width: 65px;
     margin-bottom: 9px;
   }
-
-
 }
 
 @media (max-width: 580px) {
