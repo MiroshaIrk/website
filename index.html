@@ -20,8 +20,6 @@
       --url-features-two: url("../images/christmas-decorations.svg");
       --url-features-three: url("../images/flowers.svg");
       --url-features-four: url("../images/delivery-truck.svg");
-
-
     }
   </style>
 
@@ -37,6 +35,7 @@
   <link rel="stylesheet" href="./css/pay.css">
   <link rel="stylesheet" href="./css/option-pay.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <script src="garland/garland.js" defer></script>
   <title>Christmas Trees - Встречай Новый Год с прекрасной живой ёлочкой!</title>
 </head>
 
@@ -260,94 +259,13 @@
           <a class="footer__link" href="https://t.me/Mrshmallowww">tg @Mrshmallowww</a>
         </p>
         <p class="footer__item">2022 год</p>
-        <p class="footer__item">©Cristmas Trees</p>
+        <p class="footer__item">© Cristmas Trees</p>
       </div>
 
     </div>
   </footer>
 
-
-  <!--  ------------------------------------------------------------------------------------------------------------------- -->
-  <style>
-    body {
-      position: relative;
-    }
-
-    body::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url(./images/elka.png);
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      pointer-events: none;
-      z-index: 1000;
-    }
-
-    .garland {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 36px;
-      background-image: url(./images/christmas.png);
-      pointer-events: none;
-      z-index: 999;
-    }
-
-    .garland_one {
-      background-position: 0 0;
-    }
-
-    .garland_two {
-      background-position: 0 -36px;
-    }
-
-    .garland_three {
-      background-position: 0 -72px;
-    }
-
-    .garland_four {
-      background-position: 0 -108px;
-    }
-  </style>
-
-  <div class="garland garland_one" id="garlend">
-
-  </div>
-  <script>
-    const garland = document.querySelector('.garland');
-    let order = 1;
-
-    setInterval(() => {
-      switch (order) {
-        case 1:
-          garland.classList.add('garland_two');
-          garland.classList.remove('garland_one');
-          order = 2;
-          break;
-        case 2:
-          garland.classList.add('garland_three');
-          garland.classList.remove('garland_two');
-          order = 3;
-          break;
-        case 3:
-          garland.classList.add('garland_four');
-          garland.classList.remove('garland_three');
-          order = 4;
-          break;
-        case 4:
-          garland.classList.add('garland_two');
-          garland.classList.remove('garland_four');
-          order = 2;
-          break;
-
-        default:
-          break;
-      }
-    }, 500);
-
-  </script>
+  <script src="./snow/snow.js"></script>
 </body>
 
 </html>
