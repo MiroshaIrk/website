@@ -35,7 +35,13 @@
   <link rel="stylesheet" href="./css/pay.css">
   <link rel="stylesheet" href="./css/option-pay.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/overlay.css">
+  <link rel="stylesheet" href="./css/modal.css">
+
   <script src="garland/garland.js" defer></script>
+  <script src="./js/burger.js" defer></script>
+  <script src="./js/modal.js" defer></script>
+
   <title>Christmas Trees - Встречай Новый Год с прекрасной живой ёлочкой!</title>
 </head>
 
@@ -49,21 +55,21 @@
         </svg>
       </a>
       <button class="burger header__burger">
-        <span class="header__burger-line"></span>
+        <span class="burger__line"></span>
       </button>
       <nav class="header__navigation navigation">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">Пихта Фразера</a>
+            <a class="nav__link" href="#one">Пихта Фразера</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Русская ель</a>
+            <a class="nav__link" href="#two">Русская ель</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Сибирская пихта</a>
+            <a class="nav__link" href="#three">Сибирская пихта</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Как оплатить?</a>
+            <a class="nav__link" href="#pay">Как оплатить?</a>
           </li>
         </ul>
       </nav>
@@ -106,7 +112,7 @@
           <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение
             длительного времени, делают её одним из лучших деревьев для рождества</p>
           <div class="product__button-wrapper">
-            <button class="product__button product__button__order">Заказать</button>
+            <button class="product__button product__button__order" data-order="Пихта Фразера">Заказать</button>
             <a class="product__button product__button__more" href="#">Подробнее</a>
           </div>
         </div>
@@ -124,7 +130,7 @@
             короткие колючие иголки и сравнительно менее
             пышная крона</p>
           <div class="product__button-wrapper">
-            <button class="product__button product__button__order">Заказать</button>
+            <button class="product__button product__button__order" data-order="Русская ель">Заказать</button>
             <a class="product__button product__button__more" href="#">Подробнее</a>
           </div>
         </div>
@@ -141,14 +147,14 @@
             от еловой крупнее, зеленее, совершенно не колючая и мягкая
             как трава</p>
           <div class="product__button-wrapper">
-            <button class="product__button product__button__order">Заказать</button>
+            <button class="product__button product__button__order" data-order="Сибирская пихта">Заказать</button>
             <a class="product__button product__button__more" href="#">Подробнее</a>
           </div>
         </div>
         <img class="product__picture" src="./images/photo4.jpg" width="630" height="590" alt="tree fraser-fir">
       </div>
     </section>
-    <section class="pay">
+    <section class="pay" id="pay">
       <div class="container">
         <h2 class="pay__title">Как можно оплатить</h2>
         <ul class="pay__list">
@@ -264,6 +270,44 @@
 
     </div>
   </footer>
+
+  <div class="overlay overlay_order">
+    <div class="modal">
+      <button class="modal__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_134_2)">
+            <path
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+              fill="currentColor" />
+          </g>
+          <defs>
+            <clipPath id="clip0_134_2">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+
+      <h2 class="modal__title">Оформить заказ</h2>
+      <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <label class="modal__label">
+          <span class="modal__label-text">ФИО</span>
+          <input class="modal__input" required name="bio" type="text" placeholder="Введите ваше ФИО">
+        </label>
+
+        <label class="modal__label modal__label-last">
+          <span class="modal__label-text">Телефон</span>
+          <input class="modal__input" required name="tel" type="tel" placeholder="Введите номер вашего телефона">
+        </label>
+
+        <input class="modal__order" type="hidden" name="order">
+
+        <button class="modal__button">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+  <div class="overlay overlay_consultation"></div>
+
 
   <script src="./snow/snow.js"></script>
 </body>
