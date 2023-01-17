@@ -1,6 +1,5 @@
 const phoneInputs = document.querySelectorAll('.modal__input-phone');
 const modalButtons = document.querySelectorAll('.modal__button');
-console.log(phoneInputs);
 
 
 
