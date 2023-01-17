@@ -60,4 +60,4 @@ const createSnow = (min, max, saturation) => {
   setInterval(createSnowItem, (1000 / saturation));
 };
 
-// createSnow(10, 5, 10);
+createSnow(10, 5, 10);

@@ -56,7 +56,7 @@
 }
 
 .footer__link-social:hover {
-  transform: rotateZ(360deg);
+  transform: scale(1.3);
 }
 
 

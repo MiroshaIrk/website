@@ -80,7 +80,7 @@
 
 .modal__button {
   padding: 14px 36px;
-  background-color: var(--trigger-color);
+  background-color: var(--second-bg);
   border-radius: 10px;
   font-weight: 700;
   font-size: 18px;
@@ -89,6 +89,12 @@
   border: none;
   color: var(--main-color);
   align-self: flex-end;
+  pointer-events: none;
+}
+
+.modal__button-active {
+  pointer-events: auto;
+  background-color: var(--trigger-color);
 }
 
 @media(max-width: 1200px) {
