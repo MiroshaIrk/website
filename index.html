@@ -37,8 +37,10 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/overlay.css">
   <link rel="stylesheet" href="./css/modal.css">
+  <link rel="stylesheet" href="./timer/timer.css">
 
   <script src="garland/garland.js" defer></script>
+  <script src="./timer/timer.js" defer></script>
   <script src="./js/burger.js" defer></script>
   <script src="./js/modal.js" defer></script>
 
@@ -87,7 +89,11 @@
           <p class="hero__description">У нас в наличии только самые пушистые
             и свежие ёлки</p>
           <a class="hero__down" href="#one">
-            <img class="hero__down-img" src="./images/bauble.png" alt="" width="113" height="139">
+            <picture>
+              <source srcset="./images/bauble.avif" type="image/avif">
+              <source srcset="./images/bauble.webp" type="image/webp">
+              <img class="hero__down-img" src="./images/bauble.png" type="image/png" alt="" width="113" height="139">
+            </picture>
             <span>Заказать</span>
           </a>
         </div>
@@ -200,7 +206,7 @@
       </svg>
 
       <address class="footer__contacts">
-        <a class="footer__item footer__link" href="tel:+79041502045">8 (904) 150 20 45</a>
+        <a class="footer__item footer__link" href="tel:+79041502045">8 (904) 999 99 99</a>
         <a class="footer__item footer__link" href="mailto:Cristmas_Trees@mail.ru">Cristmas_Trees@mail.ru</a>
       </address>
 
